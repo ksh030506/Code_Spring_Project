@@ -1,4 +1,4 @@
-# Code_Spring_Project ( 코드로 배우는 스프링 웹 프로젝트 ) - 개정판
+# Code_Spring_Project ( 코드로 배우는 스프링 웹 프로젝트 ) 개정판
 ### 실무 개발에서 사용하는 도구로써 스프링을 다루고 있습니다 > 순서에 초점을 맞추고 프로젝트 진행
 
 <hr/>
@@ -23,5 +23,14 @@
 
 ## 책의 구성 요소
 ```
-    __PART 1 : 스프링 개발환경 구축__
+    PART 1 : 스프링 개발환경 구축
+    PART 2 : 스프링 MVC 설정
+    PART 3 : 기본적인 웹 게시물 관리
+    PART 4 : REST 방식과 Ajax를 이용하는 댓글 처리
+    PART 5 : AOP와 트랙잭션
+    PART 6 : 파일 업로드 처리
+    PART 7 : Spring Web Security를 이용한 로그인 처리
 ```
+
+
+* 외부링크: <http://cafe.naver.com/gugucoding/>
