@@ -26,7 +26,8 @@ public class SampleTests {
     assertNotNull(restaurant);
     
     log.info(restaurant);
-    log.info("----------------------------------");
+    log.info("===================================");
+    log.info(restaurant.getClass());
     log.info(restaurant.getChef());
     
   }
