@@ -5,17 +5,20 @@
 
 <mapper namespace="org.zerock.mapper.BoardMapper">
 
+	<!-- select -->
 	<select id="getList" resultType="org.zerock.domain.BoardVO">
 		<![CDATA[
 		Select * from tb1_board where bno > 0
 		]]>
 	</select>
 	
+	<!-- insert1 -->
 	<insert id="insert">
 		insert into tb1_board (bno, title, content, writer)
 		values (seq_board.nextval, #{title}, #{content}, #{writer})
 	</insert>
 	
+	<!-- insert2 -->
 	<insert id="insertSelectKey">
 		
 		<selectKey keyProperty="bno" order="BEFORE" resultType="long">
@@ -25,6 +28,14 @@
 		insert into tb1_board (bno, title, content, writer)
 		values (#{bno}, #{title}, #{content}, #{writer})
 	</insert>
-
+	
+	<!-- read -->
+	<select id="read" resultType="org.zerock.domain.BoardVO">
+		select * from tb1_board where bno = #{bno}
+	</select>
+	
+	
+	
+	
 </mapper>
 	
