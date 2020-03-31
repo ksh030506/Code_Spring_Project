@@ -10,6 +10,21 @@
 		Select * from tb1_board where bno > 0
 		]]>
 	</select>
+	
+	<insert id="insert">
+		insert into tb1_board (bno, title, content, writer)
+		values (seq_board.nextval, #{title}, #{content}, #{writer})
+	</insert>
+	
+	<insert id="insertSelectKey">
+		
+		<selectKey keyProperty="bno" order="BEFORE" resultType="long">
+			select seq_board.nextval from dual
+		</selectKey>
+		
+		insert into tb1_board (bno, title, content, writer)
+		values (#{bno}, #{title}, #{content}, #{writer})
+	</insert>
 
 </mapper>
 	
