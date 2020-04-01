@@ -19,11 +19,11 @@ PRIMARY KEY (bno);
 commit;
 
 -- 더미 데이터 생성 (예시 데이터 생성)
-INSERT INTO tb1_board (bno, title, content, writer) VALUES (seq_board.nextval, '테스트 제목1', '테스트 내용1', 'user00');
-INSERT INTO tb1_board (bno, title, content, writer) VALUES (seq_board.nextval, '테스트 제목2', '테스트 내용2', 'user00');
-INSERT INTO tb1_board (bno, title, content, writer) VALUES (seq_board.nextval, '테스트 제목3', '테스트 내용3', 'user00');
-INSERT INTO tb1_board (bno, title, content, writer) VALUES (seq_board.nextval, '테스트 제목4', '테스트 내용4', 'user00');
-INSERT INTO tb1_board (bno, title, content, writer) VALUES (seq_board.nextval, '테스트 제목5', '테스트 내용5', 'user00');
+INSERT INTO tbl_board (bno, title, content, writer) VALUES (seq_board.nextval, '테스트 제목1', '테스트 내용1', 'user00');
+INSERT INTO tbl_board (bno, title, content, writer) VALUES (seq_board.nextval, '테스트 제목2', '테스트 내용2', 'user00');
+INSERT INTO tbl_board (bno, title, content, writer) VALUES (seq_board.nextval, '테스트 제목3', '테스트 내용3', 'user00');
+INSERT INTO tbl_board (bno, title, content, writer) VALUES (seq_board.nextval, '테스트 제목4', '테스트 내용4', 'user00');
+INSERT INTO tbl_board (bno, title, content, writer) VALUES (seq_board.nextval, '테스트 제목5', '테스트 내용5', 'user00');
 
 commit;
 
