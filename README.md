@@ -37,7 +37,5 @@
     PART 7 : Spring Web Security를 이용한 로그인 처리
 ```
 
-- 구멍가게 코딩단 카페 : <http://cafe.naver.com/gugucoding/>
-
-
-##### [GitHub/ksh030506](https://github.com/ksh030506)
+#### - 구멍가게 코딩단 카페 : <http://cafe.naver.com/gugucoding/>
+#### - [GitHub/ksh030506](https://github.com/ksh030506)
