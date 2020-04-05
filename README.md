@@ -38,4 +38,4 @@
 ```
 
 #### - 구멍가게 코딩단 카페 : <http://cafe.naver.com/gugucoding/>
-#### - [내 깃허브 : GitHub/ksh030506](https://github.com/ksh030506)
+#### - 깃허브 : [GitHub/ksh030506](https://github.com/ksh030506)
