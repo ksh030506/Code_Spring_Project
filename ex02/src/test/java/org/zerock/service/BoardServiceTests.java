@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.zerock.domain.BoardVO;
+import org.zerock.domain.Criteria;
 
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
@@ -44,10 +45,12 @@ public class BoardServiceTests {
 //	}
 	
 	
-//	@Test
-//	public void testGetList() {
-//		service.getList().forEach(board -> log.info(board));
-//	}
+	@Test
+	public void testGetList() {
+		//service.getList().forEach(board -> log.info(board));
+		
+		service.getList(new Criteria(2, 10)).forEach(board -> log.info(board));
+	}
 	
 //	@Test
 //	public void testGet() {
@@ -59,17 +62,17 @@ public class BoardServiceTests {
 //		log.info("REMOVE RESULT : " + service.remove(1L));
 //	}
 	
-	@Test
-	public void testUpdate() {
-		
-		BoardVO boardVO = service.get(2L);
-		
-		if( boardVO == null) {
-			return;
-		}
-		
-		boardVO.setTitle("제목을 수정합니다");
-		log.info("MODIFYRESULT : " + service.modify(boardVO));
-	}
+//	@Test
+//	public void testUpdate() {
+//		
+//		BoardVO boardVO = service.get(2L);
+//		
+//		if( boardVO == null) {
+//			return;
+//		}
+//		
+//		boardVO.setTitle("제목을 수정합니다");
+//		log.info("MODIFYRESULT : " + service.modify(boardVO));
+//	}
 	
 }
