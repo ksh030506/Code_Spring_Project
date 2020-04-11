@@ -46,9 +46,20 @@
         
         <button data-oper='list' class="btn btn-info">List</button>
         
+        
+        
+        
+        
        <form id="operForm" action="/board/modify" method="get">
        	<input type="hidden" id="bno" name="bno" value="<c:out value="${board.bno }"/>">
+       	<input type="hidden" name="pageNum" value="<c:out value="${cri.pageNum }"/>">
+       	<input type="hidden" name="amount" value="<c:out value="${cri.amount }"/>">
        </form>
+       
+       
+       
+       
+       
         
       </div>
       <!--  end panel-body -->
@@ -62,30 +73,23 @@
 
 <script type="text/javascript">
 $(document).ready(function() {
-
-
-	  var formObj = $("form");
-
-	  $('button').on("click", function(e){
-	    
-	    e.preventDefault(); 
-	    
-	    var operation = $(this).data("oper");
-	    
-	    console.log(operation);
-	    
-	    if(operation === 'remove'){
-	      formObj.attr("action", "/board/remove");
-	      
-	    }else if(operation === 'list'){
-	      //move to list
-	      formObj.attr("action", "/board/list").attr("method","get");     
-	      formObj.empty();       
-	    }
-	    
-	    formObj.submit();
-	  });
-
+  
+  var operForm = $("#operForm"); 
+  
+  $("button[data-oper='modify']").on("click", function(e){
+    
+    operForm.attr("action","/board/modify").submit();
+    
+  });
+  
+    
+  $("button[data-oper='list']").on("click", function(e){
+    
+    operForm.find("#bno").remove();
+    operForm.attr("action","/board/list")
+    operForm.submit();
+    
+  });  
 });
 </script>
 
