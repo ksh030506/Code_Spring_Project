@@ -27,14 +27,14 @@ public class BoardControllerTests {
 
 	@Setter(onMethod_ = { @Autowired })
 	private WebApplicationContext ctx;
-	
+
 	private MockMvc mockMvc;
-	
+
 	@Before
 	public void setup() {
 		this.mockMvc = MockMvcBuilders.webAppContextSetup(ctx).build();
 	}
-	
+
 //	@Test
 //	public void testList() throws Exception {
 //
@@ -55,7 +55,7 @@ public class BoardControllerTests {
 //		
 //		log.info(resultPage);
 //	}
-	
+
 //	@Test
 //	public void testGet() throws Exception {
 //		log.info(
@@ -67,8 +67,7 @@ public class BoardControllerTests {
 //			.getModelMap()				
 //		);
 //	}
-	
-	
+
 //	@Test
 //	public void testModify() throws Exception{
 //		String resultPage = mockMvc
@@ -81,8 +80,7 @@ public class BoardControllerTests {
 //				.getModelAndView()
 //				.getViewName();
 //	}
-	
-	
+
 //	@Test
 //	public void testRemove() throws Exception {
 //		//삭제전 데이터베이스에 있는 게시물 번호여야함
@@ -94,19 +92,12 @@ public class BoardControllerTests {
 //		
 //		log.info(resultPage);
 //	}
-	
-	
+
 	@Test
 	public void testListPaging() throws Exception {
-		
-		log.info(mockMvc.perform(
-				MockMvcRequestBuilders.get("/board/list")
-				.param("pageNum", "2")
-				.param("amount", "50"))
+
+		log.info(mockMvc.perform(MockMvcRequestBuilders.get("/board/list").param("pageNum", "2").param("amount", "50"))
 				.andReturn().getModelAndView().getModelMap());
 	}
-	
-	
+
 }
-
-
