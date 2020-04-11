@@ -25,8 +25,10 @@ INSERT INTO tbl_board (bno, title, content, writer) VALUES (seq_board.nextval, '
 INSERT INTO tbl_board (bno, title, content, writer) VALUES (seq_board.nextval, '테스트 제목4', '테스트 내용4', 'user00');
 INSERT INTO tbl_board (bno, title, content, writer) VALUES (seq_board.nextval, '테스트 제목5', '테스트 내용5', 'user00');
 
+-- 커밋 
 commit;
 
+-- 테이블 검색하기
 select * from tb1_board;
 
 commit;
