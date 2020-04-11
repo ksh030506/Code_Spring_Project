@@ -8,7 +8,7 @@ import org.zerock.domain.Criteria;
 public interface BoardMapper {
 
 	public List<BoardVO> getList();
-	
+
 	public List<BoardVO> getListWithPaging(Criteria cri);
 
 	public void insert(BoardVO board);
