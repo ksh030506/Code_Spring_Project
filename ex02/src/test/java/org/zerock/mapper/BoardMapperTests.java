@@ -85,16 +85,28 @@ public class BoardMapperTests {
 //
 //	}
 	
+//	@Test
+//	public void testPaging() {
+//		Criteria cri = new Criteria();
+//		cri.setPageNum(1);
+//		cri.setAmount(10);
+//		
+//		List<BoardVO> list = mapper.getListWithPaging(cri);
+//		
+//		list.forEach(board -> log.info(board.getBno()));
+//		
+//	}
+	
+	
 	@Test
-	public void testPaging() {
+	public void testSerch() {
 		Criteria cri = new Criteria();
-		cri.setPageNum(1);
-		cri.setAmount(10);
+		cri.setKeyword("남양");
+		cri.setType("T");
 		
 		List<BoardVO> list = mapper.getListWithPaging(cri);
 		
-		list.forEach(board -> log.info(board.getBno()));
-		
+		list.forEach(board -> log.info(board));
 	}
 	
 }
