@@ -152,6 +152,13 @@
 			<version>1.18.12</version>
 			<scope>provided</scope>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-1.2-api -->
+		<dependency>
+    		<groupId>org.apache.logging.log4j</groupId>
+    		<artifactId>log4j-1.2-api</artifactId>
+    		<version>2.7</version>
+		</dependency>
 		 
 	</dependencies>
     <build>
