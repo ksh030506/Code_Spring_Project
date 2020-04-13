@@ -11,11 +11,15 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.zercok.domain.SampleVO;
+import org.zercok.domain.Ticket;
 
 import lombok.extern.log4j.Log4j;
+import oracle.jdbc.proxy.annotation.Post;
 
 @RestController
 @RequestMapping("/sample")
@@ -81,6 +85,13 @@ public class SampleController {
 		@PathVariable("pid") Integer pid) {
 		
 		return new String[] {"category: " + cat, "productid: " + pid}; 
+	}
+	
+	@PostMapping("/ticket")
+	public Ticket convert(@RequestBody Ticket ticket) {
+		System.out.println("convert.......ticket" + ticket);
+		
+		return ticket;
 	}
 	
 
