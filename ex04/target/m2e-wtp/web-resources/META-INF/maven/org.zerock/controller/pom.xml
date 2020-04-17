@@ -9,7 +9,7 @@
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	<properties>
 		<java-version>1.8</java-version>
-		<org.springframework-version>4.3.7.RELEASE</org.springframework-version>
+		<org.springframework-version>5.0.7.RELEASE</org.springframework-version>
 		<org.aspectj-version>1.6.10</org.aspectj-version>
 		<org.slf4j-version>1.6.6</org.slf4j-version>
 	</properties>
@@ -175,8 +175,7 @@
 			<version>1.16</version>
 		</dependency>
 		
-		<!-- 파트 3이후로 새로 추가된 라이브러리 -->
-		<!-- 추가한 라이브러리 -->
+		<!-- 댓글 처리하면서 추가되는 라이브러리 -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
@@ -193,6 +192,7 @@
 		 	<artifactId>gson</artifactId>
 		 	<version>2.8.2</version>
 		 </dependency>
+		
 		
 	</dependencies>
     <build>
